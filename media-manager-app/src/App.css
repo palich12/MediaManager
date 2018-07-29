@@ -8,8 +8,9 @@
 }
 
 .App-header {
+  --App-heder-height: 50px;
   background-color: #222;
-  height: 150px;
+  height: var(--App-heder-height);
   padding: 20px;
   color: white;
 }
@@ -18,11 +19,55 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.editor-field{
+  position: absolute;
+  left: 0px;
+  top: var(--App-heder-height);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.media-block {
+  display: inline-block;
+  position: absolute;
+  background: lightgrey;
 }
+
+.media-block > img {
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.edit-squere {
+  --edit-squere-size: 30px;
+  position: absolute;
+  width: var(--edit-squere-size);
+  height: var(--edit-squere-size);
+}
+
+.media-block:hover .edit-squere{
+  background: black;
+}
+
+.edit-squere-top-left{
+  top: 0px;
+  left: 0px;
+}
+.edit-squere-top-right{
+  top: 0px;
+  right: 0px;
+}
+
+.edit-squere-bottom-left{
+  bottom: 0px;
+  left: 0px;
+}
+.edit-squere-bottom-right{
+  bottom: 0px;
+  right: 0px;
+}
+
