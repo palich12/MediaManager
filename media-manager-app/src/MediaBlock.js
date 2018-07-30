@@ -98,7 +98,7 @@ class MediaBlock extends Component {
             top: state.offsetTop
           };
         return (
-            <div    className="media-block" 
+            <div    className={"media-block " + this.state.type} 
                     ref={this.mainElement}
                     style={mediaBlockSize}
                     onMouseDown={this.startDrag}
